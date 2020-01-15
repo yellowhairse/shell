@@ -1,0 +1,10 @@
+--name:test_odps
+--author:wtong
+--create time:2019-12-23 19:38
+
+
+select * from mx_gf_zs_ggzsgjmx where rfq=max_pt('mx_gf_zs_ggzsgjmx');
+
+
+
+
