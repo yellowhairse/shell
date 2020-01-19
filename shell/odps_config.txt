@@ -1,0 +1,34 @@
+CURRENT_PROJECT_NAME=KF_MX_ZRRYH_SJYY
+#ODPS连接信息(莲花池)
+ACCESS_ID_LHC=iCXHRIlU5ZhK0IoJ
+ACCESS_KEY_LHC=WWVDZ0Y2RjJvdzliWGxpVGpkUDJac2txZUVoOFBlCg==
+end_point_LHC=http://service.cn-foshan-lhc-d01.odps.ops.its.tax.cn/api 
+tunnel_endpoint_LHC=http://dt.cn-foshan-lhc-d01.odps.ops.its.tax.cn
+log_view_host_LHC=http://logview.cn-foshan-lhc-d01.odps.alicloud.its.tax.cn
+
+#ADS连接信息(莲花池)
+ADS_HOSTNAME_SCCX=zrryh-sccx-kf-17875cbf.cn-foshan-lhc-am338001-a.alicloud.its.tax.cn
+ADS_USERNAME_SCCX=iCXHRIlU5ZhK0IoJ
+#ADS_PASSWORD_SCCX=WWVDZ0Y2RjJvdzliWGxpVGpkUDJac2txZUVoOFBlCg==
+ADS_PASSWORD_SCCX=YeCgF6F2ow9bXliTjdP2ZskqeEh8Pe
+ADS_DBNAME_SCCX=zrryh_sccx_kf
+ADS_PORT_SCCX=10171
+SHELL_DATAX_HOME=/home/admin/shell_datax/kf_mx_zrryh_sjyy
+DATAX_EXE=/home/admin/datax3/bin/datax.py
+
+#RDS 大屏展示 配置信息
+MYSQL_HOSTNAME_DPZS=99.13.221.254
+MYSQL_USERNAME_DPZS=its_sjzt_dpzs
+MYSQL_PASSWORD_DPZS=U2VydnkwdVNlcnZ5b3UyMDE4Cg==
+MYSQL_DBNAME_DPZS=sjzt_dpzs
+MYSQL_PORT_DPZS=3306
+
+#ADS SCXX 配置信息
+MYSQL_HOSTNAME_SCCX=zrryh-sccx-kf-17875cbf.cn-foshan-lhc-am338001-a.alicloud.its.tax.cn
+MYSQL_USERNAME_SCCX=4PJd1Y1J7PFAeSLm
+MYSQL_PASSWORD_SCCX=U2VydnkwdVZ3dXp1V1UwQWluV1I4VVdidEtBM3BYSHRSWFFNSgo=
+MYSQL_DBNAME_SCCX=zrryh_sccx_kf
+MYSQL_PORT_SCCX=10002
+
+#秘钥
+SECRET_KEY=Servy0u
