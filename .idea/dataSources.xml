@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL for 5.1 - kf01_workflow@drdshbga8qzszt6opublic.drds.aliyuncs.com" uuid="e6e72f1a-47cf-4807-b1e6-07cfa943f78f">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://drdshbga8qzszt6opublic.drds.aliyuncs.com:3306/kf01_workflow</jdbc-url>
+    </data-source>
+  </component>
+</project>
