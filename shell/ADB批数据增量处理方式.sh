@@ -7,11 +7,16 @@
 #********************************************************************#
 ##@resource_reference{"odps_config.txt"}
 ##@resource_reference{"odps_base_util.sh"}
+
+mysql -hdrdshbga8qzszt6opublic.drds.aliyuncs.com -P3306 -uits_kf01_workflow -pServyouITS -Dkf01_workflow -A -c -s -e "select 1"
+
 #!/bin/bash
 . ./odps_base_util.sh
 odpscmd=`getLhcOdpscmd`
 rdscmd=`getRdsConnnection 'PZK'`
 adscmd=`getAdsConnnection 'SCCX'`
+
+echo ${rdscmd}
 
 #入参 target_tab_name source_tab_name source_tab_number error_number runCount
 function qccx_kbsql_zl()
