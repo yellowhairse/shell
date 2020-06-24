@@ -29,5 +29,5 @@ sh /gpfsetl/etldata/shell_file/exec_job.sh DEAL_MID_ZQ4_NG_FLOW_GE_H.ktr "$timeS
 done
 
 
-sh exec_hour_job_manual.sh 2020042723 2020042901 >exec_hour_job_manual.log  2>&1
+sh exec_hour_job_manual.sh 2020042914 2020042919 >exec_hour_job_manual.log  2>&1
 
