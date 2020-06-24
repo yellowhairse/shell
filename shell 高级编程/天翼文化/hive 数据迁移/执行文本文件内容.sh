@@ -13,16 +13,23 @@
 function get_hivesql()
 {
     tablename=$1;
-    exec_sql="hive -e ""\"set hive.exec.stagingdir=/tmp/hive-staging;select "\'$tablename\'",count(1) from jyfx."$tablename";\""">>/ZooLeader/JobFile/shell/jyfxalltables.log"
+    	exec_sql="insert into table jyfx.all_tables select "\'$tablename\'",count(1) from jyfx."$tablename";"
     echo $exec_sql
 }
 
-
 filepath='/ZooLeader/JobFile/shell/all_tables/001.txt'
 
-for line in `cat  $filepath`
+hivehint="set hive.exec.stagingdir=/tmp/hive-staging;"
+echo '>>>>>>>>this is hivehint: '$hivehint
+
+/software/hive/bin/hive -e "$hivehint"
+
+for line in `cat $filepath`
 do
-    get_hivesql $line
+    sql=`get_hivesql $line`
+    echo '>>>>>>>>this is hivesql:'$sql
+    /software/hive/bin/hive -e "$sql"
 done
+
 
 
