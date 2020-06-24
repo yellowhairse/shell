@@ -17,6 +17,7 @@ function get_hivesql()
     echo $exec_sql
 }
 
+
 filepath='/ZooLeader/JobFile/shell/all_tables/001.txt'
 
 for line in `cat  $filepath`
