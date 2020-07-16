@@ -9,7 +9,7 @@
 
 
 #拼接用于执行的hivesql
-
+c
 function get_hivesql()
 {
     tablename=$1;
