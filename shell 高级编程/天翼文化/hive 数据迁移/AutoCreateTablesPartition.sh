@@ -28,25 +28,24 @@ count=0
 #echo ${tablename[0]}
 
 function CreateHivePar(){
-    `hive -e 'alter table '$1' add IF NOT EXISTS partition(dt='\'${2}\'') location '\'${hdfsurl}${3}dt=${2}/\'`
+    #`hive -e 'alter table '$1' add IF NOT EXISTS partition(dt='\'${2}\'') location '\'${hdfsurl}${3}dt=${2}/\'`
+    echo 'alter table '$1' add IF NOT EXISTS partition(dt='\'${2}\'') location '\'${hdfsurl}${3}dt=${2}/\'
 }
 
+
+function CreatePartitionMore(){
 for d in ${Datelist[@]}
 do
-    CreateHivePar ${tablename[0]} ${d} ${hdfspath[0]}
+    CreateHivePar ${tablename[$1]} ${d} ${hdfspath[$1]}
     if [ $? -eq 0 ];
-    then echo  `date` '>>>>> TABLE [' ${tablename[0]}  '] ADD PARTITION ['${d}'] SUCCUSS'
+    then echo  `date` '>>>>> TABLE [' ${tablename[$1]}  '] ADD PARTITION ['${d}'] SUCCUSS'
     elif [ $?-ne 0 ];
-    then echo  `date` '>>>>> TABLE [' ${tablename[0]}  '] ADD PARTITION ['${d}'] FAILD'
+    then echo  `date` '>>>>> TABLE [' ${tablename[$1]}  '] ADD PARTITION ['${d}'] FAILD'
     fi
-
-    CreateHivePar ${tablename[1]} ${d} ${hdfspath[1]}
-    if [ $? -eq 0 ];
-    then echo  `date` '>>>>> TABLE [' ${tablename[1]}  '] ADD PARTITION ['${d}'] SUCCUSS'
-    elif [ $?-ne 0 ];
-    then echo  `date` '>>>>> TABLE [' ${tablename[1]}  '] ADD PARTITION ['${d}'] FAILD'
-    fi
-
 done
+}
+
+CreatePartitionMore 0
+
 
 
