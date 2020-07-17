@@ -9,10 +9,8 @@
 
 #定义路径和脚本
 Scriptpath='/home/bigdata/hive/Script_shell/'
-Scriptnote='AutoCreateTablesPartition.sh'
+Script=${Scriptpath}'AutoCreateTablesPartition.sh'
 
 #执行脚本
-nohup sh ${Scriptpath}${Scriptnote} &
+nohup sh ${Script} >/home/bigdata/hive/log/AutoCreateTablesPartition.log &
 
-
-/home/bigdata/hive/Run/RunAutoCreateTablesPartition.sh
